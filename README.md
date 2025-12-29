@@ -15,8 +15,9 @@ Installation Notes:
 ===================
 
 * Copy the two pieces to your ${HOME} making sure to get the 'raw' versions from github
-    * wget https://github.com/vinceskahan/weewx/raw/refs/heads/main/weewx-rtldavis/src.tgz
-    * wget https://github.com/vinceskahan/weewx/raw/refs/heads/main/weewx-rtldavis/install-weewx-rtldavis.sh
+    * wget https://github.com/weewx-contrib/weewx-rtldavis/raw/refs/heads/main/src.tgz
+    * wget https://raw.githubusercontent.com/weewx-contrib/weewx-rtldavis/refs/heads/main/install-weewx-rtldavis.sh
+
 * Edit the bash script and set the desired variables at the top of the script to '1' it will run that step.
 * Then run 'bash install-weewx-rtldavis.sh'
 
