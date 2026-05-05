@@ -3,7 +3,7 @@
 
 FWIW, I found the rtldavis installation repos and instructions to be very difficult to follow, and there are many pieces downloaded throughout the installation procedure from other upstream repositories.  Furthermore, there are edits needed if you a a US user.  Lastly, under the hood the 'go' steps do downloads from other upstream sites.  Assembling all the pieces at build time can be problematic and the risk is that if only one of the upstream sites disappears, it would not be possible to build a working weewx rtldavis installation from scratch.
 
-This repo attempts to make it easier and remove such risks.   It contains all the consolidated sources and a bash script to automate building and installing the pieces of the puzzle.
+This repo attempts to make it easier and remohttps://raw.githubusercontent.com/vinceskahan/weewx/refs/heads/main/weewx-pipinstall/install-v5pip.sh?token=GHSAT0AAAAAADSUE2ET43V3URGD6DT2BIHC2P2HR6Qve such risks.   It contains all the consolidated sources and a bash script to automate building and installing the pieces of the puzzle.
 
 Contents:
 =========
@@ -14,9 +14,17 @@ Contents:
 Installation Notes:
 ===================
 
-* Copy the two pieces to your ${HOME} making sure to get the 'raw' versions from github
+* Mandatory - download the required pieces to your ${HOME} making sure to get the 'raw' versions from github
     * wget https://github.com/weewx-contrib/weewx-rtldavis/raw/refs/heads/main/src.tgz
+        - this is a tarball of the compressed upstream sources
     * wget https://raw.githubusercontent.com/weewx-contrib/weewx-rtldavis/refs/heads/main/install-weewx-rtldavis.sh
+        * this is the main wrapper script
+        * see the comments therein
+        * you need the 'optional' next script below if you set INSTALL_WEEWX=1
+
+* Optional - this automates installing weewx + nginx and integrating the two: 
+    * wget https://raw.githubusercontent.com/weewx-contrib/weewx-rtldavis/refs/heads/main/weewx-pipinstall/install-v5pip.sh
+      * note: this does a 'pip' install of weewx and can also install the forked Belchertown skin if enable that here
 
 * Edit the bash script and set the desired variables at the top of the script to '1' it will run that step.
 * Then run 'bash install-weewx-rtldavis.sh'
