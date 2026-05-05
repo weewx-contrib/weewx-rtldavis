@@ -3,7 +3,7 @@
 
 FWIW, I found the rtldavis installation repos and instructions to be very difficult to follow, and there are many pieces downloaded throughout the installation procedure from other upstream repositories.  Furthermore, there are edits needed if you a a US user.  Lastly, under the hood the 'go' steps do downloads from other upstream sites.  Assembling all the pieces at build time can be problematic and the risk is that if only one of the upstream sites disappears, it would not be possible to build a working weewx rtldavis installation from scratch.
 
-This repo attempts to make it easier and remohttps://raw.githubusercontent.com/vinceskahan/weewx/refs/heads/main/weewx-pipinstall/install-v5pip.sh?token=GHSAT0AAAAAADSUE2ET43V3URGD6DT2BIHC2P2HR6Qve such risks.   It contains all the consolidated sources and a bash script to automate building and installing the pieces of the puzzle.
+This repo attempts to remove risks of the upstream sites and tries to make building and installing easier.   It contains all the consolidated sources and a bash script to automate building and installing the pieces of the puzzle.
 
 Contents:
 =========
