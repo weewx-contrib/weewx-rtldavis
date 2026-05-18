@@ -23,8 +23,8 @@ Installation Notes:
         * you need the 'optional' next script below if you set INSTALL_WEEWX=1
 
 * Optional - this automates installing weewx + nginx and integrating the two: 
-    * wget https://raw.githubusercontent.com/weewx-contrib/weewx-rtldavis/refs/heads/main/weewx-pipinstall/install-v5pip.sh
-      * note: this does a 'pip' install of weewx and can also install the forked Belchertown skin if enable that here
+    * wget https://raw.githubusercontent.com/weewx-contrib/weewx-rtldavis/refs/heads/main/install-v5pip.sh
+* note: this does a 'pip' install of weewx and can also install the forked Belchertown skin if enable that here
 
 * Edit the bash script and set the desired variables at the top of the script to '1' it will run that step.
 * Then run 'bash install-weewx-rtldavis.sh'
