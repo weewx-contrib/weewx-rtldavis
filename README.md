@@ -11,6 +11,10 @@ Contents:
 * install-weewx-rtldavis.sh - script that installs everything
 * src.tgz - sources for the pieces of the puzzle
 
+Dockerizing this setup:
+=======================
+* please see the 'docker' directory here...
+
 Installation Notes:
 ===================
 

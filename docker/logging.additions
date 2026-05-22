@@ -1,0 +1,16 @@
+#---- log to stdout ---
+
+[Logging]
+    LOG_ROOT = log
+    [[root]]
+        handlers = timed_rotate,
+    [[handlers]]
+        [[[timed_rotate]]]
+            level = DEBUG
+            formatter = standard
+            class = logging.handlers.TimedRotatingFileHandler
+            filename = log/{process_name}.log
+            when = midnight
+            backupCount = 7
+
+#---- log to stdout ---

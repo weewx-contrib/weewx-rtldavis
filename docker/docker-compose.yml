@@ -1,0 +1,17 @@
+#
+# we pass the usb bus through so the container can access the RTL-SDR dongle
+# and map public_html and archive to the docker host
+#
+# volumes are a little odd below for the log
+services:
+  weertlsdr:
+    container_name: weertlsdr
+    image: rtlsdr:latest
+    restart: unless-stopped
+    privileged: true
+    devices:
+      - '/dev/bus/usb:/dev/bus/usb'
+    volumes:
+      - /mnt/weertlsdr/public_html:/opt/weewx-data/public_html
+      - /mnt/weertlsdr/archive:/opt/weewx-data/archive
+      - /mnt/weertlsdr:/opt/weewx-data/log

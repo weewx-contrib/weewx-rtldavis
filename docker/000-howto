@@ -1,0 +1,28 @@
+
+#---------------------------------------------------
+# blacklist the device from modprobe
+# create the file below
+#---------------------------------------------------
+# /etc/modprobe.d/98-blacklist-rtlsdr.conf
+blacklist dvb_usb_rtl28xxu
+
+#---------------------------------------------------
+# udev file to create a /dev/rtlsdr symlinked device
+# run 'lsusb' to see the vendor and product codes
+#
+# to test initially:
+#    sudo udevadm control --reload-rules
+#    then 'reattach' the device and it should create /dev/rtlsdr
+#    you should see a /dev/rtlsdr device now
+#---------------------------------------------------
+# /etc/udev/rules.d/98-rtlsdr.rules
+SUBSYSTEM=="usb",ATTRS{idVendor}=="0bda",ATTRS{idProduct}=="2838",MODE="0666",SYMLINK+="rtlsdr"
+
+
+docker run --rm -it --device /dev/bus/usb rtlsdr:latest bash
+(then run 'rtl_test' in the container and it should attach ok)
+
+to test:
+  /root/bin/rtldavis -t US -v
+and wait a couple minutes...
+
