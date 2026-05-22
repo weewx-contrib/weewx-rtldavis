@@ -6,7 +6,7 @@
 services:
   weertlsdr:
     container_name: weertlsdr
-    image: rtlsdr:latest
+    image: weertlsdr:latest
     restart: unless-stopped
     privileged: true
     devices:
