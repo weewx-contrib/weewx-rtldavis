@@ -100,8 +100,9 @@ if [ "x${INSTALL_WEEWX}" = "x1" ]
 then
   # 2025-1117 - reorganized this github set of repos
   echo "...... INSTALL_WEEWX=1 - running ......."
-  wget -qO - https://raw.githubusercontent.com/vinceskahan/weewx/refs/heads/main/weewx-pipinstall/install-v5pip.sh | bash
-  sudo systemctl stop weewx
+  bash install-v5pip.sh     # if you downloaded it here
+  # wget -qO - https://raw.githubusercontent.com/vinceskahan/weewx/refs/heads/main/weewx-pipinstall/install-v5pip.sh | bash
+  # sudo systemctl stop weewx
 else
     echo "...... INSTALL_WEEWX=0 - skipping ......"
 fi
