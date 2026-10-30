@@ -1,3 +1,8 @@
+## SUPPORT NOTES
+
+IMPORTANT - this repo 'wrappers' upstream code to make it more easily installable. I do not plan to support 'enhancing' the underlying code.  There are at least two active forks of Luc's driver that I am aware of as of 2026-10-30.  See the weewx-user group for any announcements/etc. those authors may have made public.
+
+LICENSING - all licensing terms for the underlying software of course apply.  I merely added a wrapper script as well as my pre-existing script that makes installing weewx itself somewhat simpler.  For anything *I* wrote, my basic licensing terms are go appropriately wild. Be nice. Ideally give me a mention in a CREDITS file or the like.  If you want to call that mindset Apache license-like, sure.  Anything I write by default can be considered to be as-is no-guarantees buyer-beware but it works well enough for me.  Thanks.
 
 ## Scripted install of weewx using the rtldavis driver
 
